@@ -10,7 +10,9 @@ For Pico CMS > 2.0:
     ```
 		theme: default
     ```
+
 		to
+
     ```
 		theme: femto
     ```
@@ -18,7 +20,7 @@ For Pico CMS > 2.0:
 
 ## Demo
 
-  * You can find a live demo at <blog.pixelwoelkchen.de>
+  * You can find a live demo at <http://blog.pixelwoelkchen.de>
 
 ## Usage
 
