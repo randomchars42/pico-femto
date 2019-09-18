@@ -1,0 +1,238 @@
+/* Typography */
+
+/* reset inspired by  http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+	border-width: 0;
+	font-size: 1;
+	font: inherit;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	font-family: serif;
+	font-size: 16px;
+	line-height: 1.3;
+	color: #3F3F3F;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 1.8rem;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 1.4rem;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+h4 {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+h5 {
+	font-weight: normal;
+	font-style: italic;
+	font-size: 1rem;
+}
+
+h6 {
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+ol, ul {
+	margin-left: 2.5rem;
+}
+
+ol {
+	list-style-type: decimal-leading-zero;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+h1, h2, h3, h4, h5, h6, table, ul, ol, img, p, blockquote, pre {
+	margin-bottom: 0.8rem;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th, td {
+	vertical-align: top;
+}
+
+img {
+	border-style: none;
+	border-width: 0;
+}
+
+a, a:link {
+	text-decoration: underline;
+	color: #6ca2d8;
+}
+
+a:visited {
+	color: #a26cd8;
+}
+
+code, pre {
+	font-family: monospace;
+	font-size: 0.8rem;
+	background-color: #CCCCCC;
+	padding: 0.1rem;
+	border-radius: 0.1rem;
+}
+
+pre {
+	padding: 0.5rem;
+}
+
+q {
+	font-style: italic;
+}
+
+blockquote {
+	font-style: italic;
+	border-style: none none none solid;
+	border-width: 0.3rem;
+	border-color: #CCCCCC;
+	padding-left: 0.8rem;
+}
+
+/* Layout */
+
+body {
+	width: 100%;
+	min-width: 580px;
+	max-width: 800px;
+	margin: auto;
+}
+
+header {
+	/*box-shadow: 0 8px 8px -6px rgba(0, 0, 0, 0.4);*/
+	margin-bottom: 3rem;
+	position: sticky;
+	top: 0;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+.blog header {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav ul {
+	margin: 0;
+	padding-bottom: 0.3rem;
+}
+
+nav li {
+	display: inline;
+	padding: 0 0.5rem;
+}
+
+nav li:first-child, nav li:last-child {
+	padding: 0;
+}
+
+body > header h1 {
+	font-size: 2.2rem;
+	margin-bottom: 0;
+}
+
+body.blog > header h1 {
+	font-size: 4.6rem;
+}
+
+body > header a,
+body > header a:link, 
+body > header a:visited,
+main.blog a,
+main.blog a:link,
+main.blog a:visited {
+	text-decoration: none;
+	color: #3F3F3F;
+}
+
+body > header nav a:hover,
+body > header nav .active a,
+.blog main a:hover {
+	/*text-decoration: underline;*/
+	color: #AAA;
+}
+
+main header {
+	/* the difference between site-heading (2.2rem x 1.3) and page-heading (1.8rem x 1.3) */
+	padding-bottom: calc(0.4rem * 1.3);
+	margin-bottom: 0.8rem;
+}
+
+main header h1 {
+	/*display: inline;
+	padding-right: 0.5rem;*/
+	margin: 0;
+}
+
+.blog main.blog {
+	position: absolute;
+	top: 85%;
+	height: 15%;
+	width: 100%;
+	min-width: 580px;
+	max-width: 800px;
+	overflow: scroll;
+}
+
+main.blog ul {
+	margin-left: 0;
+	list-style-type: none;
+}
+
+main.blog a {
+	text-decoration: none;
+	font-weight: bold;
+}
