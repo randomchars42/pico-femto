@@ -1,11 +1,16 @@
-A very minimal theme for [Pico CMS](https://www.picocms.org), designed to help simple blogs.
+A very minimal theme for [Pico CMS](https://www.picocms.org), designed to help
+simple blogs.
 
 ## Installation
 
 For Pico CMS > 2.0:
 
   * Download or clone the code and upload it to `themes/femto`.
-  * Edit `config/config.yml`:
+  * Edit `config/config.yml`, change:
+    ```
+		theme: default
+    ```
+		to
     ```
 		theme: femto
     ```
@@ -17,9 +22,34 @@ For Pico CMS > 2.0:
 
 ## Usage
 
-`femto` supports two sorts of content:
+For things like Impressum just create a file `/impressum.md`.
 
-  * Files at top level ('/index.md', '/contact.md', etc.) will be permanently visible for navigation (like `start`, `impressum`, etc)
-  * (Blog-) content goes into subfolders, either:
-      * a folder like `blog` for everything you post, or
-      * different folders, the folder names can be seen as "tags", each folder should have an `index.md` with **optional** content.
+Blog content goes into subfolders, either a single folder, e.g. `/blog/` or one
+folder per topic. Make sure every folder has an `index.md` with **optional**
+content (the theme will automagically display all posts as links).
+
+So your folder structure may look like:
+
+```
+/index.md
+/impressum.md
+/blog/index.md
+/blog/my_latest_craze.md
+/blog/a_fancy_idea.md
+/blog/my_first_post_sigh.md
+...
+```
+
+or
+
+```
+/index.md
+/impressum.md
+/ideas/index.md
+/ideas/my_latest_craze.md
+/ideas/a_fancy_idea.md
+/ideas/my_first_post_sigh.md
+/notsobrilliant/index.md
+/notsobrilliant/don_t_do_this.md
+...
+```
