@@ -6,13 +6,7 @@ simple blogs.
 For Pico CMS > 2.0:
 
   * Download or clone the code and upload it to `themes/femto`.
-  * Edit `config/config.yml`, change:
-    ```
-		theme: default
-    ```
-
-		to
-
+  * Edit `config/config.yml`, so it contains
     ```
 		theme: femto
     ```
@@ -62,7 +56,7 @@ Content in a folder called `archive` will not be listed on the front page.
 
 ### Ordering first level pages
 
-By default, the pages on the first level appear in alphabetical order in your navigation. If you wanted to change that behaviour you need to edit `config/config.yml` so it looks like this:
+By default, the pages on the first level appear in alphabetical order in your navigation. If you wanted to change that behaviour you need to edit `config/config.yml` so it contains these lines:
 
 ```
 pages_order_by_meta: order
