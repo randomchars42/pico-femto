@@ -24,6 +24,8 @@ For Pico CMS > 2.0:
 
 ## Usage
 
+### Structure
+
 For things like Impressum just create a file `/impressum.md`.
 
 Blog content goes into subfolders, either a single folder, e.g. `/blog/` or one
@@ -54,4 +56,28 @@ or
 /notsobrilliant/index.md
 /notsobrilliant/don_t_do_this.md
 ...
+```
+
+Content in a folder called `archive` will not be listed on the front page.
+
+### Ordering first level pages
+
+By default, the pages on the first level appear in alphabetical order in your navigation. If you wanted to change that behaviour you need to edit `config/config.yml` so it looks like this:
+
+```
+pages_order_by_meta: order
+pages_order_by: meta
+```
+
+Now you can add an `Order: NUMERICALVALUE` to each YAML-Header on your first level pages, *e.g.*:
+
+```
+/*
+Title: Archive
+Author: Eike Kühn
+Date: 19 September 2019
+Order: 3
+*/
+
+Old stuff
 ```

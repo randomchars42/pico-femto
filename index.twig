@@ -38,13 +38,20 @@
 			</nav>
 		</header>
 		{% if current_page.id ends with "index" %}
+		{% set current_tag = current_page.id|split('/')[0] %}
 			<main class="blog">
 				{{ content }}
 				<ul>
 					{% for page in pages|sort_by("time")|reverse if page.title and not page.hidden %}
 						{% set page_depth = page.id|split('/')|length %}
 						{% set page_tag = page.id|split('/')[0] %}
-						{% if page_depth == 2 and page_tag != "" and not (page.id ends with "index") %}
+						{#
+							  * display all pages in subfolders (depth: 2), that are not index pages for their subfolder (do not end with "index)
+							  * display pages of all tags on the start page (current_page.id: "index")
+							  * else display only the tag of the current index
+							  * do not display pages from the archive (page_tag: "archive") on the start page
+						#}
+						{% if page_depth == 2 and (current_page.id == "index" or page_tag == current_tag) and not (page.id ends with "index") and not (page_tag == "archive" and current_page.id == "index") %}
 							<li>
 								<a href="{{ page.url }}">/ {{ page.date_formatted }} / {% if current_page.id == "index" %}{{ page_tag }} / {% endif %}{{ page.title }}</a>
 							</li>
