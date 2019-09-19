@@ -142,8 +142,7 @@ blockquote {
 /* Layout */
 
 body {
-	width: 100%;
-	min-width: 580px;
+	width: 90%; 
 	max-width: 800px;
 	margin: auto;
 }
@@ -157,12 +156,14 @@ header {
 	text-align: center;
 }
 
+@media screen and (min-width: 600px) {
 .blog header {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
 }
 
 nav ul {
@@ -180,12 +181,31 @@ nav li:first-child, nav li:last-child {
 }
 
 body > header h1 {
-	font-size: 2.2rem;
+	font-size: 2rem;
 	margin-bottom: 0;
 }
 
-body.blog > header h1 {
-	font-size: 4.6rem;
+@media screen and (min-width: 600px) {
+	body > header h1 {
+		font-size: 2.2rem;
+		margin-bottom: 0;
+	}
+
+	body.blog > header h1 {
+		font-size: 4.6rem;
+	}
+
+	main header {
+		/* the difference between site-heading (2.2rem x 1.3) and page-heading (1.8rem x 1.3) */
+		padding-bottom: calc(0.4rem * 1.3);
+		margin-bottom: 0.8rem;
+	}
+}
+
+main header h1 {
+	/*display: inline;
+	padding-right: 0.5rem;*/
+	margin: 0;
 }
 
 body > header a,
@@ -205,26 +225,15 @@ body > header nav .active a,
 	color: #AAA;
 }
 
-main header {
-	/* the difference between site-heading (2.2rem x 1.3) and page-heading (1.8rem x 1.3) */
-	padding-bottom: calc(0.4rem * 1.3);
-	margin-bottom: 0.8rem;
-}
-
-main header h1 {
-	/*display: inline;
-	padding-right: 0.5rem;*/
-	margin: 0;
-}
-
-.blog main.blog {
-	position: absolute;
-	top: 85%;
-	height: 15%;
-	width: 100%;
-	min-width: 580px;
-	max-width: 800px;
-	overflow: scroll;
+@media screen and (min-width: 600px) {
+	.blog main.blog {
+		position: absolute;
+		top: 85%;
+		height: 15%;
+		width: 90%;
+		max-width: 800px;
+		overflow: scroll;
+	}
 }
 
 main.blog ul {
