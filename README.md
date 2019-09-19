@@ -68,7 +68,7 @@ Now you can add an `Order: NUMERICALVALUE` to each YAML-Header on your first lev
 ```
 /*
 Title: Archive
-Author: Eike Kühn
+Author: AUTHOR
 Date: 19 September 2019
 Order: 3
 */
