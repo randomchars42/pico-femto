@@ -1,3 +1,7 @@
+**This repository has been archived** because development of `picocms` seems to have been discontinued. For a simple theme for a flat file based blog consider using [randomchars42/jekyll-documentor](https://github.com/randomchars42/jekyll-documentor) with [Jekyll](https://jekyllrb.com) which is used to publish github pages and most likely won't leave us in the near future.
+
+---
+
 A very minimal theme for [Pico CMS](https://www.picocms.org), designed to help
 simple blogs.
 
